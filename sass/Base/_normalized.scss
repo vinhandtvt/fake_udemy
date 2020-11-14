@@ -1,0 +1,25 @@
+// _normalized.scss dùng để customize trực tiếp thư viện
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 35%;
+    left: -3%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% !important;
+    background-color: $color-white-0 !important;
+    box-shadow: 0 2px 8px 2px rgba(20,23,28,0.1);
+    z-index: 3;
+    
+
+    span{
+        @include styleText($color-blue, $fs-4, $fw-normal);
+        line-height: .6;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.owl-next{
+    left: unset;
+    right: -3%;
+}

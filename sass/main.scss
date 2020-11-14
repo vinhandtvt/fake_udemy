@@ -1,0 +1,43 @@
+// Helper 
+@import './Helper/variables';
+@import './Helper/mixin';
+
+// Vendors
+// chỉ import file có đuôi scss
+
+
+// Base 
+@import './Base/reset';
+@import './Base/customizes';
+
+// Components 
+@import './Components/button';
+
+// Layout 
+
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Base/normalized';
+@import './Layouts/services';
+@import './Layouts/student';
+@import './Layouts/banner';
+@import './Layouts/topcategories';
+@import './Layouts/comment';
+@import './Layouts/companies';
+@import './Layouts/footer';
+
+
+
+
+
+
+
+
+
+// Pages 
+
+
+// Theme
+// nằm dưới cùng

@@ -1,0 +1,156 @@
+.banner{
+    margin-top: $mg-2;
+    align-items: center;
+    background-color: $color-black-0;
+    color: $color-gray-5;
+    display: flex;
+    height: 360px;
+    text-align: center;
+    position: relative;
+    .banner__borderTop{
+        background: linear-gradient(-45deg,$color-red-0,$color-purple);
+        height: 8px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .banner__content{
+        .banner__top{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: space-evenly;
+            text-align: center;
+            margin-top: 48px;
+            margin-bottom: 32px;
+            @include styleText($color-white-0, $fs-4, $fw-normal);
+            .top__item1{
+                width: 100%;
+                flex-grow: 1;
+            }
+            .top__item2{
+                flex-grow: 1;
+                width: 100%;
+            }
+            .top__item3{
+                flex-grow: 1;
+                width: 100%;
+            }
+            .top__item4{
+                flex-grow: 1;
+                width: 100%;
+            }
+            .top__item5{
+                flex-grow: 1;
+                width: 100%;
+            }
+
+        }
+        .banner__middle{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-evenly;
+            text-align: center;
+            margin-top: 48px;
+            margin-bottom: 32px;
+            .middle__item1{
+                @include styleText($color-white-0, $fs-4, $fw-normal);
+                transform: translateX(10%);
+            }
+            .middle__item2{
+                p:first-child{
+                    @include styleText($color-gray-5, $fs-3, $fw-bold-1);
+                    line-height: 1.33rem;
+                    margin-bottom: 16px;
+                }
+                p:last-child{
+                    @include styleText($color-gray-5, $fs-0, $fw-normal);
+                }
+                button{
+                    @include styleButton($color-gray-4, $color-red-0, $pd-1, $pd-1, $border-radius);
+                    @include styleText($color-white-0, $fs-0, $fw-bold);
+                    &:hover{
+                        @include styleButtonHover($color-black-0, $color-red-2,$pd-1, $pd-1, $color-black-0);
+                    }
+                }
+            }
+            .middle__item3{
+                @include styleText($color-white-0, $fs-4, $fw-normal);
+                transform: translateX(-10%);
+            }
+        }
+        .banner__bottom{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: space-evenly;
+            text-align: center;
+            @include styleText($color-white-0, $fs-4, $fw-normal);
+            margin-top: 48px;
+            margin-bottom: 32px;
+            .bottom__item1{
+                width: 100%;
+                flex-grow: 1;
+            }
+            .bottom__item2{
+                flex-grow: 1;
+
+                width: 100%;
+            }
+            .bottom__item3{
+                flex-grow: 1;
+                width: 100%;
+            }
+            .bottom__item4{
+                flex-grow: 1;
+                width: 100%;
+            }
+            .bottom__item5{
+                flex-grow: 1;
+    
+                width: 100%;
+            }
+        }
+        @media screen and(max-width:992px){
+            .banner__top{
+                display: none;
+    
+            }
+            .banner__middle{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-content: space-evenly;
+                text-align: center;
+                margin-top: 48px;
+                margin-bottom: 32px;
+                .middle__item1{
+                    display: none;
+                }
+                .middle__item2{
+                    flex-grow: 1;
+                    p:first-child{
+                        @include styleText($color-gray-5, $fs-3, $fw-bold-1);
+                        line-height: 1.33rem;
+                        margin-bottom: 16px;
+                    }
+                    p:last-child{
+                        @include styleText($color-gray-5, $fs-0, $fw-normal);
+                    }
+                    button{
+                        @include styleButton($color-gray-4, $color-red-0, $pd-1, $pd-1, $border-radius);
+                        @include styleText($color-white-0, $fs-0, $fw-bold);
+                        &:hover{
+                            @include styleButtonHover($color-black-0, $color-red-2,$pd-1, $pd-1, $color-black-0);
+                        }
+                    }
+                }
+                .middle__item3{
+                    display: none;
+                }
+            }
+            .banner__bottom{
+                display: none;
+                
+            }
+        }
+    }
+}

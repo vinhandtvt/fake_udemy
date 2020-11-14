@@ -1,0 +1,101 @@
+.courses{
+    margin-top: $mg-2;
+    .courses__content{
+        width: 90%;
+        margin: auto;
+        .courses__content-left{
+            display: flex;
+            align-items: center;
+            margin-bottom: $mg-1;
+            background: rgb(247, 248, 250);
+            .courses__intro{
+
+            
+                h2{
+                    @include styleText($color-black-0, $fs-2 - 1, $fw-bold);
+    
+                }
+            }
+        }
+        @media screen and( max-width: 992px){
+            .courses__content-left{
+                display: none;
+            }
+            .myTab{
+                width: 900px;
+            }
+        }
+        
+        .myTab{
+            .nav{
+                justify-content: space-between;
+                border: none;
+                &:hover{
+                    .nav-link{
+                        border: none;
+                    }
+                }
+                .nav-link.active{
+                    border: none;
+                    border-bottom: 5px solid $color-blue;
+                }
+                .nav-link{
+                    @include styleText($color-black-0, $fs-0, $fw-normal);
+                    border: none;
+                }
+            }
+            .tab-content{
+                margin-top: $mg-2;
+                position: relative;
+                cursor: pointer;
+                // position: relative; để chỉnh owl-pre mũi tên 
+                .card-title{
+                    @include styleText($color-black-0, $fs-0, $fw-bold);
+                    line-height: 1.5rem;
+                    height: 3rem;
+                    overflow: hidden;
+                    // text-overflow: ellipsis; need js 
+                    // height: 1.5rem;
+                    // line-height: 3rem;/* height is 2x line-height, so two lines will display */
+                    // overflow: hidden;/* prevents extra lines from being visible */
+                    // text-overflow: ellipsis; /*display 3 dots ... after */
+                    // // dùng để wrap text ở hàng thứ 2 hiển thỉ ... sau đó 
+
+                }
+                .card-text{
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+                .rating{
+                    .rating__star{
+                        @include styleText($color-yellow, $fs-1, $fw-normal);
+                        margin-right: $mg-0;
+                    }
+                    span:nth-child(2){
+                        @include styleText($color-gray-4, $fs-1, $fw-bold);
+                        margin-right: $mg-0
+                    }
+                    span:last-child{
+                        @include styleText($color-gray-4, $fs-1, $fw-normal);
+                        
+                    }
+                }
+                .price{
+                    text-align: right;
+                    .old-price{
+                        @include styleText($color-gray-4, $fs-1, $fw-normal);
+                        text-decoration: line-through;
+                    }
+                    .new-price{
+                        @include styleText($color-black-0, $fs-0, $fw-bold);
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}

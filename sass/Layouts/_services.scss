@@ -1,0 +1,39 @@
+.services{
+    background-color: $color-white-cream;
+    height: 205px;
+    margin-top: $mg-2;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    .services__content{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .services__item{
+            width: 33,333%;
+            align-items: flex-start;
+            display: flex;
+            padding: $pd-2 + 4;
+            margin-right: $mg-1 + 6;
+            text-align: left;
+            background-color: $color-white-0;
+            .services__icon{
+                height: 42px;
+                margin-right: $mg-1 !important;
+                width: 42px;
+            }
+            .services__details{
+                h4{
+                    @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+                    line-height: 1.47rem;
+                    margin-bottom: $mg-0 + 2;
+                }
+                p{
+                    @include styleText($color-gray-4, $fs-0 + 1, $fw-normal);
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}

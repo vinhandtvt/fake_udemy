@@ -1,0 +1,97 @@
+.companies{
+    padding-top: $pd-2 + $pd-2;
+    background-color: $color-gray-5;
+    text-align: center;
+    padding-bottom: $pd-2 + 2;
+    // height: 600px;
+
+    .companies__content{
+        h5{
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+            padding-top: $pd-3;
+        }
+        .companies__logo{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+            width: 70%;
+            height: 100px;
+            margin: auto;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .udemy__business{
+            display: flex;
+            width: 70%;
+            margin: auto;
+            padding-bottom: $pd-2 + 2;
+            .udemy__left{
+                flex-grow: 1;
+                max-width: 50%;
+                text-align: center;
+                border-right: 1px solid $color-gray-6;
+                padding: 28px 30px;
+                .udemy__title{
+                    a{
+                        @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+                        line-height: 1.47rem;
+                        padding-top: $pd-0 - 2;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .udemy__info{
+                    @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+                    padding-top: 3px;
+                    line-height: 1.5rem;
+                    text-align: center;
+                }
+                button{
+                    @include styleButton($color-gray-4, $color-red-0, $pd-1, $pd-1, $border-radius);
+                    @include styleText($color-white-0, $fs-0, $fw-bold);
+                    &:hover{
+                        @include styleButtonHover($color-black-0, $color-red-2,$pd-1, $pd-1, $color-white-0);
+                    }
+                    
+
+                }
+
+            }
+            .udemy__right{
+                flex-grow: 1;
+                max-width: 50%;
+                text-align: center;
+                padding: 28px 30px;
+                .udemy__title{
+                    a{
+                        @include styleText($color-black-0, $fs-2 - 1, $fw-bold-1);
+                        line-height: 1.47rem;
+                        padding-top: $pd-0 - 2;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                    
+                }
+                .udemy__info{
+                    @include styleText($color-black-0, $fs-0 + 1, $fw-normal);
+                    padding-top: 3px;
+                    line-height: 1.5rem;
+                    text-align: center;
+                }
+                button{
+                    @include styleButton($color-gray-4, $color-red-0, $pd-1, $pd-1, $border-radius);
+                    @include styleText($color-white-0, $fs-0, $fw-bold);
+                    &:hover{
+                        @include styleButtonHover($color-black-0, $color-red-2,$pd-1, $pd-1, $color-white-0);
+                    }
+                    
+
+                }
+            }
+
+
+        }
+    }
+}

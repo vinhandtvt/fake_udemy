@@ -1,0 +1,129 @@
+.topcategories{
+    @include styleText($color-black-0, $fs-0, $fw-normal);
+    background-color: $color-white-0;
+    line-height: 1.43rem;
+    margin: $mg-2 0;
+
+    .topcategories__content{
+        width: 90%;
+        margin: auto;
+        .topcategories__title{
+            @include styleText($color-black-0, $fs-3, $fw-bold-1);
+            line-height: 1.33rem;
+            margin-bottom: $mg-1 - 2;
+        }
+        .topcategories__details{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 40px;
+            row-gap: 15px;
+            .topcategories__item{
+                display: flex;
+                width: 100%;
+                padding: $pd-2 - 5;
+                cursor: pointer;
+                align-items: center;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1),0 3px 1px 0 rgba(20,23,28,.1);
+                a{
+                    display: flex;
+                    width: 80%;
+                    @include styleText($color-black-0, $fs-0, $fw-normal);
+                    &:hover{
+                        text-decoration: none;
+                        padding: 0;
+                    }
+                }
+                span:first-child{
+                    font-size: $fs-4;
+                    padding-right: 16px;
+                }
+                span:last-child{
+                    text-align: center;
+                    align-self: center;
+                }
+
+
+                &:hover{
+                    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                }
+            }
+           
+    }  
+    @media screen and(max-width: 992px) {
+        .topcategories__details{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+            row-gap: 15px;
+            .topcategories__item{
+                display: flex;
+                width: 100%;
+                padding: $pd-2 - 5;
+                cursor: pointer;
+                align-items: center;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1),0 3px 1px 0 rgba(20,23,28,.1);
+                a{
+                    display: flex;
+                    width: 80%;
+                    @include styleText($color-black-0, $fs-0, $fw-normal);
+                    &:hover{
+                        text-decoration: none;
+                        padding: 0;
+                    }
+                }
+                span:first-child{
+                    font-size: $fs-4;
+                    padding-right: 16px;
+                }
+                span:last-child{
+                    text-align: center;
+                    align-self: center;
+                }
+
+
+                &:hover{
+                    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 768px) {
+        .topcategories__details{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 40px;
+            row-gap: 15px;
+            .topcategories__item{
+                display: flex;
+                width: 100%;
+                padding: $pd-2 - 5;
+                cursor: pointer;
+                align-items: center;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1),0 3px 1px 0 rgba(20,23,28,.1);
+                a{
+                    display: flex;
+                    width: 80%;
+                    @include styleText($color-black-0, $fs-0, $fw-normal);
+                    &:hover{
+                        text-decoration: none;
+                        padding: 0;
+                    }
+                }
+                span:first-child{
+                    font-size: $fs-4;
+                    padding-right: 16px;
+                }
+                span:last-child{
+                    text-align: center;
+                    align-self: center;
+                }
+
+
+                &:hover{
+                    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                }
+            }
+        }
+    }
+}
+}
